@@ -39,7 +39,7 @@ buttonGrill.addEventListener("click",
                         if (bombArr.includes(i)){
                             cell.classList.add("cell-bomb");
                             clickCell = false; //assegna false a let clickCell, quindi non ci potrà più essere l'evento post click
-                            console.log("Hai trovato una bomba, hai preso!");
+                            console.log("Hai trovato una bomba, hai perso!");
                             h2.innerHTML = "Hai trovato una bomba, hai perso!";
                             h3.innerHTML = "Il tuo punteggio: " + normCellArr.length;
                         } else {
