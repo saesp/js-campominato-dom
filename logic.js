@@ -13,6 +13,8 @@
 const buttonGrill = document.getElementById("but-grill");
 // contenitore griglia
 const grill = document.getElementById("grill");
+// Click cell
+let clickCell = true;
 
 
 // creare Griglia e farla comparire solo al Click del button
@@ -28,19 +30,24 @@ buttonGrill.addEventListener("click",
             grill.append(cell);
             cell.innerHTML = i;
             
-            // quando user clicca su una cella, questa si colora di rosso se è bomba, altrimenti di azzurro
-            cell.addEventListener("click",
-                function(){
-                    if (bombArr.includes(i)){
-                        cell.classList.add("cell-bomb"); //red
-                    } else {
-                        cell.classList.add("cell-normal"); //skyblue
+            // quando user clicca una cella, questa si colora di rosso se è bomba, altrimenti di azzurro
+            if (clickCell === true){
+                cell.addEventListener("click",
+                    function(){
+
+                        if (bombArr.includes(i)){
+                            cell.classList.add("cell-bomb"); //red
+                            clickCell = false;
+                        } else {
+                            cell.classList.add("cell-normal"); //skyblue
+                            clickCell = true;
+                        }
+
+                        // emettere un messaggio in console con il numero della cella cliccata
+                        console.log("Cell num:", i);
                     }
-                    
-                    // emettere un messaggio in console con il numero della cella cliccata
-                    console.log("Cell num:", i);
-                }
-            )
+                )
+            }
         }
     }
 )
@@ -70,7 +77,7 @@ function grillFun(elementFun, classFun){
     elementF.classList.add(classFun);
 
     return elementF;
-}
+} 
 
 // Random num
 function randomNumFun(numMinFun, numMaxFun){
@@ -79,6 +86,3 @@ function randomNumFun(numMinFun, numMaxFun){
 
     return randomF;
 }
-
-
-
