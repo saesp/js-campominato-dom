@@ -14,14 +14,13 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 50px;
+    padding: 35px 60px;
 }
 #but-grill{
     padding: 8px 30px;
     border: 0;
     background-color:aqua;
-    border: 4px skyblue;
-    border-style: dashed;
+    border: 2px solid skyblue;
     border-radius: 10px;
     cursor: pointer;
 }
@@ -32,19 +31,21 @@ header{
 /* main */
 h2{
     text-align: center;
-    padding-top: 50px;
+    margin-top: 30px;
     color: rgb(57, 57, 57);
 }
 h3{
     font-size: 20px;
     text-align: center;
-    margin-top: 20px;
-    color: skyblue;
+    margin-top: 10px;
+    color: rgb(92, 195, 236);
 }
 #grill{
+    margin-top: 30px;
+    margin-bottom: 30px;
     display: flex;
     flex-wrap: wrap;
-    padding: 50px 200px;
+    padding: 0 200px;
 }
 .cell{
     background-color: aqua;
@@ -63,4 +64,11 @@ h3{
 }
 .cell.cell-normal{
     background-color: skyblue;
+}
+
+footer{
+    background-color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 30px 60px;
+    font-size: 14px;
 }

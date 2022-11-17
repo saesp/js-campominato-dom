@@ -81,8 +81,7 @@ while (bombArr.length < 16){
 console.log("Bomb array:", bombArr);
 
 
-
-// Grill
+// Fun grill 
 function grillFun(elementFun, classFun){
     const elementF = document.createElement(elementFun);
     elementF.classList.add(classFun);
@@ -90,7 +89,7 @@ function grillFun(elementFun, classFun){
     return elementF;
 } 
 
-// Random num
+// Fun random num 
 function randomNumFun(numMinFun, numMaxFun){
     let randomF = Math.floor(Math.random()*(numMaxFun - numMinFun + 1) + numMinFun);
     //console.log("Num random:", randomF);
