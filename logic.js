@@ -26,7 +26,7 @@ buttonGrill.addEventListener("click",
             grill.append(cell);
             cell.innerHTML = i;
             
-            // quando user clicca su una cella, questa si colora di rosso se è bomba, altimenti di azzurro
+            // quando user clicca su una cella, questa si colora di rosso se è bomba, altrimenti di azzurro
             cell.addEventListener("click",
                 function(){
                     if (bombArr.includes(i)){
