@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 /* header */
 header{
     background-color: white;
@@ -11,9 +15,6 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 30px 50px;
-}
-h1{
-    font-family: Arial, Helvetica, sans-serif;
 }
 #but-grill{
     padding: 8px 30px;
@@ -28,10 +29,6 @@ h1{
     background-color: skyblue;
 }
 
-/* main */
-main{
-    background-color: aqua;
-}
 #grill{
     display: flex;
     flex-wrap: wrap;

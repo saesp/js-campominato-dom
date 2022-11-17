@@ -1,5 +1,6 @@
 // Il computer deve generare 16 numeri casuali nello stesso range della difficoltà prescelta (1-100): le bombe;
 // Nella stessa cella può essere posizionata al massimo una bomba, perciò nell’array delle bombe non potranno esserci due numeri uguali;
+
 // In seguito l’utente clicca su una cella:
    // se il numero è presente nella lista dei numeri generati - abbiamo calpestato una bomba - la cella si colora di rosso e la partita termina
    // altrimenti la cella cliccata si colora di azzurro e l’utente può continuare a cliccare sulle altre celle;
@@ -17,6 +18,7 @@ const grill = document.getElementById("grill");
 // creare Griglia e farla comparire solo al Click del button
 buttonGrill.addEventListener("click",
     function(){
+        document.body.style.background = "aqua";
         // svuota grill (per non farne aggiungere una ad ogni click)
         grill.innerHTML = '';
 
