@@ -29,6 +29,18 @@ header{
     background-color: skyblue;
 }
 
+/* main */
+h2{
+    text-align: center;
+    padding-top: 50px;
+    color: rgb(57, 57, 57);
+}
+h3{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+    color: skyblue;
+}
 #grill{
     display: flex;
     flex-wrap: wrap;
@@ -43,7 +55,7 @@ header{
     text-align: center;
     line-height: 97.91px;
     font-size: 22px;
-    color: rgb(51, 51, 51);
+    color: rgb(57, 57, 57);
     cursor: pointer;
 }
 .cell.cell-bomb{
