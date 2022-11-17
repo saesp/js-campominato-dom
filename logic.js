@@ -22,7 +22,6 @@ buttonGrill.addEventListener("click",
         for (let i = 1; i <= 100; i++){
             let cell = grillFun("div", "cell");
             grill.append(cell);
-            cell.innerHTML = i;
             
 
             // quando user clicca una cella, questa si colora di rosso se è bomba, altrimenti di azzurro
@@ -32,6 +31,7 @@ buttonGrill.addEventListener("click",
                     if (clickCell === true){
 
                         // num cell cliccata
+                        cell.innerHTML = i;
                         console.log("Cell num:", i);
                         let h2 = document.getElementById("h2");
                         let h3 = document.getElementById("h3");
@@ -41,7 +41,7 @@ buttonGrill.addEventListener("click",
                             clickCell = false; //assegna false a let clickCell, quindi non ci potrà più essere l'evento post click
                             console.log("Hai trovato una bomba, hai perso!");
                             h2.innerHTML = "Hai trovato una bomba, hai perso!";
-                            h3.innerHTML = "Il tuo punteggio: " + normCellArr.length;
+                            h3.innerHTML = "Il tuo punteggio: " + normCellArr.length + "/100";
                         } else {
                             cell.classList.add("cell-normal");
                             clickCell = true; //riassegna false a let clickCell, quindi ci potrà essere ancora l'evento post click
@@ -53,10 +53,10 @@ buttonGrill.addEventListener("click",
                             clickCell = false;
                             console.log("Non hai trovato bombe, hai vinto!");
                             h2.innerHTML = "Non hai trovato bombe, hai vinto!";
-                            h3.innerHTML = "Il tuo punteggio: " + normCellArr.length;
+                            h3.innerHTML = "Il tuo punteggio: " + normCellArr.length + "/100";
                         }
 
-                        console.log("Punteggio:", normCellArr.length);
+                        console.log("Score:", normCellArr.length);
                     }
                 }
             )
