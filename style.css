@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* header */
+header{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+}
+#but-grill{
+    padding: 8px 30px;
+    border: 0;
+    background-color:aqua;
+    border: 4px skyblue;
+    border-style: dashed;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#but-grill:hover{
+    background-color: skyblue;
+}
+
+/* main */
+main{
+    background-color: aqua;
+}
+#grill{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 200px;
+}
+.cell{
+    background-color: aqua;
+    border: 1px solid gray;
+    margin: 7px;
+    width: calc(100%/10 - 14px);
+    height: 97.91px;
+    text-align: center;
+    line-height: 97.91px;
+    font-size: 22px;
+    color: rgb(51, 51, 51);
+    cursor: pointer;
+}
+.cell.cell-bomb{
+    background-color: red;
+}
+.cell.cell-normal{
+    background-color: skyblue;
+}
