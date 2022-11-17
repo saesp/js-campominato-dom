@@ -33,14 +33,16 @@ buttonGrill.addEventListener("click",
                         // num cell cliccata
                         cell.innerHTML = i;
                         console.log("Cell num:", i);
-                        let h2 = document.getElementById("h2");
+                        let h2Red = document.querySelector("h2");
+                        let h2Green = document.querySelector(".h2-green");
                         let h3 = document.getElementById("h3");
 
                         if (bombArr.includes(i)){
                             cell.classList.add("cell-bomb");
                             clickCell = false; //assegna false a let clickCell, quindi non ci potrà più essere l'evento post click
                             console.log("Hai trovato una bomba, hai perso!");
-                            h2.innerHTML = "Hai trovato una bomba, hai perso!";
+                            h2Red.innerHTML = "Hai trovato una bomba, hai perso!";
+                            h2Red.style.color = "red";
                             h3.innerHTML = "Il tuo punteggio: " + normCellArr.length + "/100";
                         } else {
                             cell.classList.add("cell-normal");
@@ -52,7 +54,7 @@ buttonGrill.addEventListener("click",
                         if (normCellArr.length === 100 - 16){
                             clickCell = false;
                             console.log("Non hai trovato bombe, hai vinto!");
-                            h2.innerHTML = "Non hai trovato bombe, hai vinto!";
+                            h2Green.innerHTML = "Non hai trovato bombe, hai vinto!";
                             h3.innerHTML = "Il tuo punteggio: " + normCellArr.length + "/100";
                         }
 

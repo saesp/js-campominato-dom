@@ -34,14 +34,15 @@ main{
 }
 h2{
     text-align: center;
-    color: rgb(57, 57, 57);
+}
+.h2-green{
+    color: green;
 }
 h3{
-    font-size: 20px;
     text-align: center;
     margin-top: 10px;
     margin-bottom: 30px;
-    color: rgb(92, 195, 236);
+    color: rgb(57, 57, 57);
 }
 #grill{
     margin-bottom: 30px;
