@@ -29,19 +29,21 @@ header{
 }
 
 /* main */
+main{
+    padding: 30px 0;
+}
 h2{
     text-align: center;
-    margin-top: 30px;
     color: rgb(57, 57, 57);
 }
 h3{
     font-size: 20px;
     text-align: center;
     margin-top: 10px;
+    margin-bottom: 30px;
     color: rgb(92, 195, 236);
 }
 #grill{
-    margin-top: 30px;
     margin-bottom: 30px;
     display: flex;
     flex-wrap: wrap;
@@ -66,6 +68,7 @@ h3{
     background-color: skyblue;
 }
 
+/* footer */
 footer{
     background-color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

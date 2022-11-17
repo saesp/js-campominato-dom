@@ -14,7 +14,7 @@ console.log(normCellArr);
 // creare Griglia e farla comparire solo al Click del button
 buttonGrill.addEventListener("click",
     function(){
-        document.body.style.background = "aqua";
+        document.getElementById("main").style.background = "aqua";
         // svuota grill (per non farne aggiungere una ad ogni click)
         grill.innerHTML = '';
 
