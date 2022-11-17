@@ -1,0 +1,40 @@
+@media screen and (max-width: 500px) {
+    
+    /* header */
+    header{
+        padding: 20px 40px;
+    }
+    #but-grill{
+        padding: 6px 22px;
+    }
+    
+    /* main */
+    h2{
+        padding: 0 50px;
+    }
+    h3{
+        padding: 0 50px;
+    }
+    #grill{
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding: 0 20px;
+    }
+    .cell{
+        height: 42.31px;
+        line-height: 42.31px;
+        /* height: 34px;
+        line-height: 34px; (x max-400px)*/
+        font-size: 12px;
+    }
+    
+    /* footer */
+    footer{
+        padding: 18px 40px;
+        font-size: 10px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+    }
