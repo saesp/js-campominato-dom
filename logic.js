@@ -27,9 +27,9 @@ buttonGrill.addEventListener("click",
             // quando user clicca una cella, questa si colora di rosso se è bomba, altrimenti di azzurro
             cell.addEventListener("click",
                 function(){
+                    
                     // controllare se è true o no. Se true c'è evento, altrimenti no
                     if (clickCell === true){
-
                         // num cell cliccata
                         cell.innerHTML = i;
                         console.log("Cell num:", i);
@@ -46,7 +46,7 @@ buttonGrill.addEventListener("click",
                             h3.innerHTML = "Il tuo punteggio: " + normCellArr.length + "/100";
                         } else {
                             cell.classList.add("cell-normal");
-                            clickCell = true; //riassegna false a let clickCell, quindi ci potrà essere ancora l'evento post click
+                            clickCell = true; //riassegna true a let clickCell, quindi ci potrà essere ancora l'evento post click
                             normCellArr.push(i);
                         }
 
@@ -68,7 +68,6 @@ buttonGrill.addEventListener("click",
 
 // Generare 16 numeri casuali nel range 1-100: le Bombe
 const bombArr = [];
-
 while (bombArr.length < 16){
     // num random 1-100
     let randomNum = randomNumFun(1, 100);
@@ -79,11 +78,10 @@ while (bombArr.length < 16){
         bombArr.push(randomNum);
     }
 }
-
 console.log("Bomb array:", bombArr);
 
 
-// Fun grill 
+// Fun crea griglia 
 function grillFun(elementFun, classFun){
     const elementF = document.createElement(elementFun);
     elementF.classList.add(classFun);
@@ -91,10 +89,9 @@ function grillFun(elementFun, classFun){
     return elementF;
 } 
 
-// Fun random num 
+// Fun crea num random 
 function randomNumFun(numMinFun, numMaxFun){
     let randomF = Math.floor(Math.random()*(numMaxFun - numMinFun + 1) + numMinFun);
-    //console.log("Num random:", randomF);
 
     return randomF;
 }
