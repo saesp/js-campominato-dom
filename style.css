@@ -31,36 +31,44 @@ header{
 /* main */
 main{
     padding: 30px 0;
+    background-color: aqua;
 }
 h2{
     text-align: center;
+    margin-bottom: 10px;
 }
 .h2-green{
     color: green;
 }
 h3{
     text-align: center;
-    margin-top: 10px;
-    margin-bottom: 30px;
-    color: rgb(57, 57, 57);
+    color: gray;
 }
 #grill{
-    margin-bottom: 30px;
+    margin: 30px auto;
+    width: calc(100vh - 100px);
+    height: calc(100vh - 100px);
     display: flex;
     flex-wrap: wrap;
-    padding: 0 400px;
+    /* padding: 0 400px; */
 }
 .cell{
+    width: calc(100%/10 - 2px);
+    height: calc(100%/10 - 2px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: aqua;
     border: 1px solid gray;
     margin: 1px;
-    width: calc(100%/10 - 2px);
-    height: 69.91px;
-    text-align: center;
-    line-height: 69.91px;
     font-size: 18px;
     color: rgb(57, 57, 57);
     cursor: pointer;
+    /* width: calc(100%/10 - 2px);
+    height: 69.91px;
+    line-height: 69.91px;
+    text-align: center; */
+    
 }
 .cell.cell-bomb{
     background-color: red;
