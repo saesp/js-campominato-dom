@@ -46,7 +46,7 @@ h3{
 }
 #grill{
     margin: 30px auto;
-    width: calc(100vh - 100px);
+    max-width: calc(100vh - 100px);
     height: calc(100vh - 100px);
     display: flex;
     flex-wrap: wrap;
