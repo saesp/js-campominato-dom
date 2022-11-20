@@ -52,7 +52,7 @@ buttonGrill.addEventListener("click",
                         }
 
                         // raggiunto num max possibile di numeri normali, partita finita
-                        if (normCellArr.length === 100 - 16){
+                        if (normCellArr.length === 100 - 10){
                             clickCell = false;
                             console.log("Non hai trovato bombe, hai vinto!");
                             h2Green.innerHTML = "Non hai trovato bombe, hai vinto!";
@@ -67,9 +67,9 @@ buttonGrill.addEventListener("click",
     }
 )
 
-// Generare 16 numeri casuali nel range 1-100: le Bombe
+// Generare 10 numeri casuali nel range 1-100: le Bombe
 const bombArr = [];
-while (bombArr.length < 16){
+while (bombArr.length < 10){
     // num random 1-100
     let randomNum = randomNumFun(1, 100);
     console.log("Random num bomb:", randomNum);
