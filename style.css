@@ -43,6 +43,11 @@ h2{
 h3{
     text-align: center;
     color: gray;
+    margin-bottom: 10px;
+}
+#restart{
+    text-align: center;
+    color: rgba(128, 128, 128, 0.667);
 }
 #grill{
     margin: 30px auto;

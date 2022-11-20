@@ -37,6 +37,7 @@ buttonGrill.addEventListener("click",
                         let h2Red = document.querySelector("h2");
                         let h2Green = document.querySelector(".h2-green");
                         let h3 = document.getElementById("h3");
+                        let restart = document.getElementById("restart");
 
                         if (bombArr.includes(i)){
                             cell.classList.add("cell-bomb");
@@ -46,6 +47,7 @@ buttonGrill.addEventListener("click",
                             h2Red.style.color = "red";
                             document.querySelector(".fa-bomb").style.color = "red";
                             h3.innerHTML = "Il tuo punteggio: " + normCellArr.length + "/100";
+                            restart.innerHTML = "Riavvia la pagina per rigiocare";
                         } else {
                             cell.classList.add("cell-normal");
                             clickCell = true; //riassegna true a let clickCell, quindi ci potrà essere ancora l'evento post click
@@ -58,6 +60,7 @@ buttonGrill.addEventListener("click",
                             console.log("Non hai trovato bombe, hai vinto!");
                             h2Green.innerHTML = "Non hai trovato bombe, hai vinto!";
                             h3.innerHTML = "Il tuo punteggio: " + normCellArr.length + "/100";
+                            restart.innerHTML = "Riavvia la pagina per rigiocare";
                         }
 
                         console.log("Score:", normCellArr.length);
