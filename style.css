@@ -80,7 +80,7 @@ h3{
 /* footer */
 footer{
     background-color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding: 25px 60px;
-    font-size: 14px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    padding: 15px 60px;
+    font-size: 12px;
 }

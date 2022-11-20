@@ -44,6 +44,7 @@ buttonGrill.addEventListener("click",
                             console.log("Hai trovato una bomba, hai perso!");
                             h2Red.innerHTML = "Hai trovato una bomba, hai perso!";
                             h2Red.style.color = "red";
+                            document.querySelector(".fa-bomb").style.color = "red";
                             h3.innerHTML = "Il tuo punteggio: " + normCellArr.length + "/100";
                         } else {
                             cell.classList.add("cell-normal");
