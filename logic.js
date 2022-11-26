@@ -68,7 +68,7 @@ buttonGrill.addEventListener("click",
                             h2Red.innerHTML = "Hai trovato una bomba, hai perso!";
                             h2Red.style.color = "red";
                             document.getElementById("bomb-red").style.color = "red";
-                            h3.innerHTML = "Il tuo punteggio: " + normCellArr.length + "/100";
+                            h3.innerHTML = "Punteggio: " + normCellArr.length + "/100";
                         } else if (!bombArr.includes(i) && !normCellArr.includes(i)) {
                             normCellArr.push(i);
                             cell.innerHTML = `<i class="fa-brands fa-pagelines"></i>`;
@@ -86,7 +86,7 @@ buttonGrill.addEventListener("click",
                             clickCell = false;
                             console.log("Non hai trovato bombe, hai vinto!");
                             h2Green.innerHTML = "Non hai trovato bombe, hai vinto!";
-                            h3.innerHTML = "Il tuo punteggio: " + normCellArr.length + "/100";
+                            h3.innerHTML = "Punteggio: " + normCellArr.length + "/100";
                         }
 
                         console.log("Score:", normCellArr.length);
