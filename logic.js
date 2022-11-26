@@ -5,16 +5,13 @@
 const buttonGrill = document.getElementById("but-grill");
 // contenitore griglia
 const grill = document.getElementById("grill");
-// Click cell
-let clickCell = true;
 
 
 // creare Griglia e farla comparire solo al Click del button
 buttonGrill.addEventListener("click",
     function(){
-        let clickCell = true;
 
-        // Array num normal cell
+        // array num normal cell
         const normCellArr = [];
         console.log(normCellArr);
         
@@ -48,6 +45,8 @@ buttonGrill.addEventListener("click",
             let cell = grillFun("div", "cell");
             grill.append(cell);
             
+            // click cell
+            let clickCell = true;
 
             // quando user clicca una cella, questa si colora di rosso se è bomba, altrimenti di azzurro
             cell.addEventListener("click",
@@ -69,11 +68,15 @@ buttonGrill.addEventListener("click",
                             h2Red.style.color = "red";
                             document.getElementById("bomb-red").style.color = "red";
                             h3.innerHTML = "Il tuo punteggio: " + normCellArr.length + "/100";
+                        } else if (!bombArr.includes(i)  && !normCellArr.includes(i)) {
+                            normCellArr.push(i);
+                            cell.innerHTML = `<i class="fa-brands fa-pagelines"></i>`;
+                            cell.classList.add("cell-normal");
+                            // clickCell = true; //riassegna true a let clickCell, quindi ci potrà essere ancora l'evento post click
+                            
                         } else {
                             cell.innerHTML = `<i class="fa-brands fa-pagelines"></i>`;
                             cell.classList.add("cell-normal");
-                            clickCell = true; //riassegna true a let clickCell, quindi ci potrà essere ancora l'evento post click
-                            normCellArr.push(i);
                         }
 
                         // raggiunto num max possibile di numeri normali, partita finita
