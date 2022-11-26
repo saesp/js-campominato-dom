@@ -15,11 +15,11 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 18px 60px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 h1{
     font-size: 35px;
     color: black;
+    font-family:'FontAwesome', 'Arial Narrow', Arial, sans-serif;
 }
 #but-grill{
     color: white;
@@ -45,7 +45,7 @@ main{
 h2{
     font-size: 27px;
     text-align: center;
-    margin-bottom: 10px;
+    margin-top: 15px;
 }
 .h2-green{
     color: green;
@@ -53,6 +53,7 @@ h2{
 h3{
     text-align: center;
     color: gray;
+    margin-top: 10px;
     margin-bottom: 15px;
 }
 /* #restart{
@@ -60,9 +61,8 @@ h3{
     color: rgba(128, 128, 128, 0.667);
 } */
 #grill{
-    padding-left: 15px;
-    padding-right: 15px;
-    margin: 20px auto;
+    padding: 15px;
+    margin: auto;
     max-width: calc(100vh - 180px);
     height: calc(100vh - 180px);
     display: flex;

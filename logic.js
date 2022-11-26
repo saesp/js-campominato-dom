@@ -7,15 +7,17 @@ const buttonGrill = document.getElementById("but-grill");
 const grill = document.getElementById("grill");
 // Click cell
 let clickCell = true;
-// Array num normal cell
-const normCellArr = [];
-console.log(normCellArr);
+
 
 // creare Griglia e farla comparire solo al Click del button
 buttonGrill.addEventListener("click",
     function(){
         let clickCell = true;
 
+        // Array num normal cell
+        const normCellArr = [];
+        console.log(normCellArr);
+        
         let h2Red = document.querySelector("h2");
         let h2Green = document.querySelector(".h2-green");
         let h3 = document.getElementById("h3");

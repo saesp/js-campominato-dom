@@ -5,9 +5,13 @@
     
     /* header */
     header{
-        padding: 18px 40px;
+        padding: 18px 30px;
+    }
+    h1{
+        margin-right: 5px;
     }
     #but-grill{
+        margin-left: 5px;
         padding: 6px 22px;
         border: 2px dotted rgb(0, 148, 0);
     }
@@ -15,6 +19,7 @@
     /* main */
     h2{
         padding: 0 50px;
+        font-size: 25px;
     }
     h3{
         padding: 0 50px;
@@ -24,12 +29,12 @@
         height: 54vh;
     }
     .cell{
-        font-size: 12px;
+        font-size: 14px;
     }
     
     /* footer */
     footer{
-        padding: 10px 40px;
+        padding: 10px 30px;
         font-size: 10px;
     }
 }
