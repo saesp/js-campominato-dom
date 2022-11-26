@@ -14,9 +14,32 @@ console.log(normCellArr);
 // creare Griglia e farla comparire solo al Click del button
 buttonGrill.addEventListener("click",
     function(){
+        let clickCell = true;
+
+        let h2Red = document.querySelector("h2");
+        let h2Green = document.querySelector(".h2-green");
+        let h3 = document.getElementById("h3");
+        h2Red.innerHTML = "";
+        h3.innerHTML = "";
+        document.getElementById("bomb-red").style.color = "black";
         
         // svuota grill (per non farne aggiungere una ad ogni click)
         grill.innerHTML = '';
+
+        // Generare 10 numeri casuali nel range 1-100: le Bombe
+        const bombArr = [];
+        while (bombArr.length < 10){
+            // num random 1-100
+            let randomNum = randomNumFun(1, 100);
+            console.log("Random num bomb:", randomNum);
+        
+            // discrimino
+            if (!bombArr.includes(randomNum)){
+                bombArr.push(randomNum);
+            }
+        }
+        console.log("Bomb array:", bombArr);
+        
 
         // creare griglia 100 Celle
         for (let i = 1; i <= 100; i++){
@@ -33,21 +56,19 @@ buttonGrill.addEventListener("click",
                         // num cell cliccata
                         cell.innerHTML = i;
                         console.log("Cell num:", i);
-                        let h2Red = document.querySelector("h2");
                         let h2Green = document.querySelector(".h2-green");
-                        let h3 = document.getElementById("h3");
-                        let restart = document.getElementById("restart");
 
                         if (bombArr.includes(i)){
+                            cell.innerHTML = `<i class="fa-solid fa-bomb">`;
                             cell.classList.add("cell-bomb");
                             clickCell = false; //assegna false a let clickCell, quindi non ci potrà più essere l'evento post click
                             console.log("Hai trovato una bomba, hai perso!");
                             h2Red.innerHTML = "Hai trovato una bomba, hai perso!";
                             h2Red.style.color = "red";
-                            document.querySelector(".fa-bomb").style.color = "red";
+                            document.getElementById("bomb-red").style.color = "red";
                             h3.innerHTML = "Il tuo punteggio: " + normCellArr.length + "/100";
-                            restart.innerHTML = "Riavvia la pagina per rigiocare";
                         } else {
+                            cell.innerHTML = `<i class="fa-brands fa-pagelines"></i>`;
                             cell.classList.add("cell-normal");
                             clickCell = true; //riassegna true a let clickCell, quindi ci potrà essere ancora l'evento post click
                             normCellArr.push(i);
@@ -59,7 +80,6 @@ buttonGrill.addEventListener("click",
                             console.log("Non hai trovato bombe, hai vinto!");
                             h2Green.innerHTML = "Non hai trovato bombe, hai vinto!";
                             h3.innerHTML = "Il tuo punteggio: " + normCellArr.length + "/100";
-                            restart.innerHTML = "Riavvia la pagina per rigiocare";
                         }
 
                         console.log("Score:", normCellArr.length);
@@ -69,20 +89,6 @@ buttonGrill.addEventListener("click",
         }
     }
 )
-
-// Generare 10 numeri casuali nel range 1-100: le Bombe
-const bombArr = [];
-while (bombArr.length < 10){
-    // num random 1-100
-    let randomNum = randomNumFun(1, 100);
-    console.log("Random num bomb:", randomNum);
-
-    // discrimino
-    if (!bombArr.includes(randomNum)){
-        bombArr.push(randomNum);
-    }
-}
-console.log("Bomb array:", bombArr);
 
 
 // Fun crea griglia 
