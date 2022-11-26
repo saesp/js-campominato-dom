@@ -1,8 +1,11 @@
 @media screen and (max-width: 500px) {
+    body{
+        background-color: rgb(14, 14, 14);
+    }
     
     /* header */
     header{
-        padding: 20px 40px;
+        padding: 18px 40px;
     }
     #but-grill{
         padding: 6px 22px;
@@ -18,20 +21,14 @@
     #grill{
         max-width: 54vh;
         height: 54vh;
-        padding: 15px;
     }
     .cell{
         font-size: 12px;
-        /* text-align: center;
-        height: 42.31px;
-        line-height: 42.31px; */
-        /* height: 34px;
-        line-height: 34px; (x max-400px)*/
     }
     
     /* footer */
     footer{
-        padding: 18px 40px;
+        padding: 10px 40px;
         font-size: 10px;
     }
-    }
+}
