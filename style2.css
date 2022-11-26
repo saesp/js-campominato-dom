@@ -9,6 +9,7 @@
     }
     #but-grill{
         padding: 6px 22px;
+        border: 2px dotted rgb(0, 148, 0);
     }
     
     /* main */
