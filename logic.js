@@ -11,6 +11,9 @@ const grill = document.getElementById("grill");
 buttonGrill.addEventListener("click",
     function(){
 
+        // click cell
+        let clickCell = true;
+
         // array num normal cell
         const normCellArr = [];
         console.log(normCellArr);
@@ -45,8 +48,6 @@ buttonGrill.addEventListener("click",
             let cell = grillFun("div", "cell");
             grill.append(cell);
             
-            // click cell
-            let clickCell = true;
 
             // quando user clicca una cella, questa si colora di rosso se è bomba, altrimenti di azzurro
             cell.addEventListener("click",
@@ -68,13 +69,14 @@ buttonGrill.addEventListener("click",
                             h2Red.style.color = "red";
                             document.getElementById("bomb-red").style.color = "red";
                             h3.innerHTML = "Il tuo punteggio: " + normCellArr.length + "/100";
-                        } else if (!bombArr.includes(i)  && !normCellArr.includes(i)) {
+                        } else if (!bombArr.includes(i) && !normCellArr.includes(i)) {
                             normCellArr.push(i);
                             cell.innerHTML = `<i class="fa-brands fa-pagelines"></i>`;
                             cell.classList.add("cell-normal");
-                            // clickCell = true; //riassegna true a let clickCell, quindi ci potrà essere ancora l'evento post click
-                            
-                        } else {
+                            clickCell = true;
+                        }
+
+                        if (!bombArr.includes(i) && normCellArr.includes(i)) {
                             cell.innerHTML = `<i class="fa-brands fa-pagelines"></i>`;
                             cell.classList.add("cell-normal");
                         }
