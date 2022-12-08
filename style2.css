@@ -26,8 +26,8 @@
     }
     @keyframes letter_space {
         0% {letter-spacing: -1px;}
-        25%  {letter-spacing: 4px;}
-        50%  {letter-spacing: 4px;}
+        25%  {letter-spacing: 5px;}
+        50%  {letter-spacing: 5px;}
         100% {letter-spacing: -1px;}
     }
     h3{
@@ -45,5 +45,24 @@
     footer{
         padding: 10px 30px;
         font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 361.60px) {
+    @keyframes letter_space {
+        0% {letter-spacing: -1px;}
+        25%  {letter-spacing: 4px;}
+        50%  {letter-spacing: 4px;}
+        100% {letter-spacing: -1px;}
+    }
+}
+
+
+@media screen and (max-width: 352px) {
+    @keyframes letter_space {
+        0% {letter-spacing: -1px;}
+        25%  {letter-spacing: 3px;}
+        50%  {letter-spacing: 3px;}
+        100% {letter-spacing: -1px;}
     }
 }
