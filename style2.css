@@ -20,6 +20,15 @@
     h2{
         padding: 0 50px;
         font-size: 24px;
+        letter-spacing: -1px;
+        animation-name: letter_space;
+        animation-duration: 2s;
+    }
+    @keyframes letter_space {
+        0% {letter-spacing: -1px;}
+        25%  {letter-spacing: 3px;}
+        50%  {letter-spacing: 3px;}
+        100% {letter-spacing: -1px;}
     }
     h3{
         padding: 0 50px;

@@ -18,6 +18,7 @@ buttonGrill.addEventListener("click",
         const normCellArr = [];
         console.log(normCellArr);
         
+        document.querySelector("h2").style.display = "none";
         let h2Red = document.querySelector("h2");
         let h2Green = document.querySelector(".h2-green");
         let h3 = document.getElementById("h3");
@@ -64,12 +65,13 @@ buttonGrill.addEventListener("click",
                             cell.innerHTML = `<i class="fa-solid fa-bomb">`;
                             cell.classList.add("cell-bomb");
                             clickCell = false; //assegna false a let clickCell, quindi non ci potrà più essere l'evento post click
-                            console.log("Hai trovato una bomba, hai perso!");
-                            h2Red.innerHTML = "Hai trovato una bomba, hai perso!";
+                            console.log("Game Over");
+                            document.querySelector("h2").style.display = "block";
+                            h2Red.innerHTML = "GAME OVER";
                             h2Red.style.color = "red";
                             document.getElementById("bomb-red").style.color = "red";
-                            h3.innerHTML = "Punteggio: " + normCellArr.length + "/100";
-                        } else if (!bombArr.includes(i) && !normCellArr.includes(i)) {
+                            h3.innerHTML = "score: " + normCellArr.length + "/100";
+                        } else if (!bombArr.includes(i) && !normCellArr.includes(i)) { //includi e fallo solo una volta
                             normCellArr.push(i);
                             cell.innerHTML = `<i class="fa-brands fa-pagelines"></i>`;
                             cell.classList.add("cell-normal");
@@ -84,9 +86,10 @@ buttonGrill.addEventListener("click",
                         // raggiunto num max possibile di numeri normali, partita finita
                         if (normCellArr.length === 100 - 10){
                             clickCell = false;
-                            console.log("Non hai trovato bombe, hai vinto!");
-                            h2Green.innerHTML = "Non hai trovato bombe, hai vinto!";
-                            h3.innerHTML = "Punteggio: " + normCellArr.length + "/100";
+                            document.querySelector("h2").style.display = "block";
+                            console.log("You Won!");
+                            h2Green.innerHTML = "YOU WON!";
+                            h3.innerHTML = "score: " + normCellArr.length + "/100";
                         }
 
                         console.log("Score:", normCellArr.length);

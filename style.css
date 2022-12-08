@@ -43,10 +43,21 @@ main{
     background-color: rgb(14, 14, 14);
 }
 h2{
+    font-family: 'Press Start 2P';
     font-size: 27px;
     text-align: center;
     margin-top: 15px;
+    animation-name: letter_space;
+    animation-duration: 3s;
+    display: none;
 }
+@keyframes letter_space {
+    0% {letter-spacing: normal;}
+    25%  {letter-spacing: 20px;}
+    50%  {letter-spacing: 20px;}
+    100% {letter-spacing: normal;}
+}
+
 .h2-green{
     color: green;
 }
@@ -55,6 +66,7 @@ h3{
     color: rgba(128, 128, 128, 0.900);
     margin-top: 10px;
     margin-bottom: 15px;
+    font-family: 'DotGothic16', sans-serif;
     font-style: italic;
 }
 #grill{
