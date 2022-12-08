@@ -26,8 +26,8 @@
     }
     @keyframes letter_space {
         0% {letter-spacing: -1px;}
-        25%  {letter-spacing: 3px;}
-        50%  {letter-spacing: 3px;}
+        25%  {letter-spacing: 4px;}
+        50%  {letter-spacing: 4px;}
         100% {letter-spacing: -1px;}
     }
     h3{
