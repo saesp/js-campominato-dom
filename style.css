@@ -44,7 +44,7 @@ main{
 }
 h2{
     font-family: 'Press Start 2P';
-    font-size: 27px;
+    font-size: 26px;
     text-align: center;
     margin-top: 15px;
     animation-name: letter_space;
@@ -67,6 +67,7 @@ h3{
     margin-top: 10px;
     margin-bottom: 15px;
     font-family: 'DotGothic16', sans-serif;
+    font-size: 16.5px;
     font-style: italic;
 }
 #grill{
